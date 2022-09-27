@@ -6,6 +6,10 @@ const devServer = require('webpack-dev-server')
 module.exports = merge(webpackConfig, {
     mode: 'development',
 
+    optimization: {
+        usedExports: 'global',
+    },
+
     devServer: {
         static: { 
             directory: path.resolve(__dirname, '../dist'), 
